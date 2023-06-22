@@ -1,6 +1,6 @@
-﻿namespace PowerplantsLoadCalculatorApi.Model
+﻿namespace GemBAL.Model
 {
-    public class PayloadResponse
+    public class PayloadResponseDto
     {
         public string Name { get; set; }
         public double P { get; set; }

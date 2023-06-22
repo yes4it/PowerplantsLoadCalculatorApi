@@ -1,6 +1,7 @@
 using AutoMapper;
+using GemBAL.Interface;
+using GemBAL.Model;
 using Microsoft.AspNetCore.Mvc;
-using PowerplantsLoadCalculatorApi.Interface;
 using PowerplantsLoadCalculatorApi.Model;
 
 namespace PowerplantsLoadCalculatorApi.Controllers
@@ -27,20 +28,9 @@ namespace PowerplantsLoadCalculatorApi.Controllers
             {
                 if (payload == null) return BadRequest();
 
-                var productionPlan = _payloadService.GetProductionPlan(payload);
+                var productionPlans = _payloadService.GetProductionPlan(_mapper.Map<PayloadDto>(payload));
 
-                var response = new List<PayloadResponse>();
-
-                foreach (var production in productionPlan)
-                {
-                    response.Add(new PayloadResponse
-                    {
-                        Name = production.Name,
-                        P = Math.Round(production.P, 1)
-                    });
-                }
-
-                return new JsonResult(response);
+                return new JsonResult(productionPlans);
             }
             catch (Exception ex)
             {

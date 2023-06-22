@@ -1,9 +1,8 @@
 ﻿using GemBAL.Factory;
 using GemBAL.Interface;
+using GemBAL.Service;
 using GemBAL.Strategy;
 using PowerplantsLoadCalculatorApi.Converters;
-using PowerplantsLoadCalculatorApi.Interface;
-using PowerplantsLoadCalculatorApi.Service;
 
 namespace PowerplantsLoadCalculatorApi
 {
