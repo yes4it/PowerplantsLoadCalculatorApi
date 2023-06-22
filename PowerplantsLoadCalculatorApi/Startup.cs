@@ -1,7 +1,9 @@
-﻿using GemBAL.Interface;
+﻿using GemBAL.Factory;
+using GemBAL.Interface;
 using GemBAL.Strategy;
 using PowerplantsLoadCalculatorApi.Converters;
-using PowerplantsLoadCalculatorApi.Manager;
+using PowerplantsLoadCalculatorApi.Interface;
+using PowerplantsLoadCalculatorApi.Service;
 
 namespace PowerplantsLoadCalculatorApi
 {
@@ -19,6 +21,20 @@ namespace PowerplantsLoadCalculatorApi
             services.AddTransient<ILoadCalculatorStrategy, TurbojetPowerPlantStrategy>();
             services.AddTransient<ILoadCalculatorStrategy, WindTurbinePowerPlantStrategy>();
             services.AddTransient<IPayloadService, PayloadService>();
+            services.AddSingleton<ILoadCalculatorStrategyFactory, LoadCalculatorStrategyFactory>(provider =>
+            {
+                var factory = new LoadCalculatorStrategyFactory();
+
+                var strategies = provider.GetServices<ILoadCalculatorStrategy>();
+
+                foreach (var strategy in strategies)
+                {
+                    factory.AddStrategy(strategy);
+                }
+
+                return factory;
+            });
+
             services.AddControllers()
               .AddJsonOptions(options =>
               {

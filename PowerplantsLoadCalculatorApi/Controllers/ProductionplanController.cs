@@ -1,6 +1,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using PowerplantsLoadCalculatorApi.Manager;
+using PowerplantsLoadCalculatorApi.Interface;
 using PowerplantsLoadCalculatorApi.Model;
 
 namespace PowerplantsLoadCalculatorApi.Controllers
@@ -27,7 +27,7 @@ namespace PowerplantsLoadCalculatorApi.Controllers
             {
                 if (payload == null) return BadRequest();
 
-                var productionPlan = _payloadService.GetProductionPlan(_mapper.Map<GemDomain.Entities.Payload>(payload));
+                var productionPlan = _payloadService.GetProductionPlan(payload);
 
                 var response = new List<PayloadResponse>();
 
@@ -35,8 +35,8 @@ namespace PowerplantsLoadCalculatorApi.Controllers
                 {
                     response.Add(new PayloadResponse
                     {
-                        Name = production.Powerplant.Name,
-                        P = Math.Round(production.Power, 1)
+                        Name = production.Name,
+                        P = Math.Round(production.P, 1)
                     });
                 }
 

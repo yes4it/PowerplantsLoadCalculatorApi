@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
-using PowerplantsLoadCalculatorApi.Model;
+using GemBAL.Model;
+using GemDomain.Entities;
+using Fuels = PowerplantsLoadCalculatorApi.Model.Fuels;
+using Payload = PowerplantsLoadCalculatorApi.Model.Payload;
 
 namespace PowerplantsLoadCalculatorApi.Mapper
 {
@@ -8,7 +11,12 @@ namespace PowerplantsLoadCalculatorApi.Mapper
         public MapperConfigProfile()
         {
             CreateMap<Payload, GemDomain.Entities.Payload>();
-            CreateMap<Fuels, GemDomain.Entities.Fuels>();
+            CreateMap<Fuels, FuelDto>();
+            CreateMap<PowerProductionDto, PowerProduction>();
+            CreateMap<PowerProduction, PowerProductionDto>();
+            CreateMap<Powerplant, PowerplantDto>();
+            CreateMap<PowerplantDto, Powerplant>();
+
         }
     }
 }

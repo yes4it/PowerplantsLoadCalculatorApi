@@ -17,5 +17,4 @@ namespace PowerplantsLoadCalculatorApi.Model
         [JsonProperty("wind(%)")]
         public int Wind { get; set; }
     }
-
 }

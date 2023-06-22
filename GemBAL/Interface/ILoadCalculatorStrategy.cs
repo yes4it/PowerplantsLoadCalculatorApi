@@ -1,4 +1,4 @@
-﻿using GemDomain.Entities;
+﻿using GemBAL.Model;
 using GemDomain.Enum;
 
 namespace GemBAL.Interface
@@ -6,6 +6,6 @@ namespace GemBAL.Interface
     public interface ILoadCalculatorStrategy
     {
         PowerPlantType PowerPlantType { get; }
-        PowerProduction CalculatePowerProduction(Powerplant powerPlant, double load, Fuels fuel);
+        PowerProductionDto CalculatePowerProduction(PowerplantDto powerPlant, double load, FuelDto fuel);
     }
 }

@@ -1,5 +1,5 @@
-﻿using GemBAL.Interface;
-using GemDomain.Entities;
+﻿using GemBAL.Model;
+using GemBAL.Interface;
 using GemDomain.Enum;
 
 namespace GemBAL.Strategy
@@ -8,18 +8,16 @@ namespace GemBAL.Strategy
     {
         public PowerPlantType PowerPlantType => PowerPlantType.gasfired;
 
-        public PowerProduction CalculatePowerProduction(Powerplant powerPlant, double load, Fuels fuels)
+        public PowerProductionDto CalculatePowerProduction(PowerplantDto powerPlant, double load, FuelDto fuels)
         {
-            var gasPrice = fuels.Gas;
+            var price = fuels.Gas;
 
-            var maxPowerProduction = load > powerPlant.Pmax ? powerPlant.Pmax : load;
-            var minPowerProduction = maxPowerProduction > powerPlant.Pmin? powerPlant.Pmin : maxPowerProduction;
+            var powerToGenerate = (load >= powerPlant.Pmax) ? powerPlant.Pmax : load;
 
+            var fuelConsumption = powerToGenerate / powerPlant.Efficiency;
+            var cost = fuelConsumption * price;
 
-            var fuelConsumption = maxPowerProduction / powerPlant.Efficiency;
-            var cost = fuelConsumption * gasPrice;
-
-            return new PowerProduction(powerPlant, minPowerProduction, cost);
+            return new PowerProductionDto(powerPlant, powerToGenerate, cost);
         }
     }
 }
