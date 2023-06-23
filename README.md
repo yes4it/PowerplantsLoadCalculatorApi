@@ -16,11 +16,11 @@ Open a terminal or command prompt and navigate to the project's root directory.
 
 Build the project by running the following command:
 
-command : dotnet build
+> dotnet build
 
 Once the build process completes successfully, execute the program by running the following command:
 
-dotnet run
+> dotnet run
 
 The program will be compiled and executed, and you should see the output in the terminal.
 
