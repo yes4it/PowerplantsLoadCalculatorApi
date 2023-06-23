@@ -2,7 +2,8 @@
 
 Hello and welcome to this code challenge
 
-Program Execution Instructions
+Program instructions
+
 This repository contains a C# program that can be executed using .NET Core. Follow the instructions below to run the program on your local machine.
 
 Prerequisites
