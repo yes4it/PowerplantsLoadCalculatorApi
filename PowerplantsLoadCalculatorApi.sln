@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerplantsLoadCalculatorApi", "PowerplantsLoadCalculatorApi\PowerplantsLoadCalculatorApi.csproj", "{B716806D-4655-4DAC-96DA-0C61A2B23570}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PowerplantsLoadCalculatorApi", "PowerplantsLoadCalculatorApi\PowerplantsLoadCalculatorApi.csproj", "{B716806D-4655-4DAC-96DA-0C61A2B23570}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GemBAL", "GemBAL\GemBAL.csproj", "{DFDE1EE5-B387-4A9B-898C-85C16B7F33DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GemBAL", "GemBAL\GemBAL.csproj", "{DFDE1EE5-B387-4A9B-898C-85C16B7F33DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GemDomain", "GemDAL\GemDomain.csproj", "{B10A47F9-118C-45A3-8E09-D0BD238DBC1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GemDomain", "GemDomain\GemDomain.csproj", "{F4CCCFF2-4626-409D-B85B-06BDCD4D27FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{DFDE1EE5-B387-4A9B-898C-85C16B7F33DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFDE1EE5-B387-4A9B-898C-85C16B7F33DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFDE1EE5-B387-4A9B-898C-85C16B7F33DB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B10A47F9-118C-45A3-8E09-D0BD238DBC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B10A47F9-118C-45A3-8E09-D0BD238DBC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B10A47F9-118C-45A3-8E09-D0BD238DBC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B10A47F9-118C-45A3-8E09-D0BD238DBC1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4CCCFF2-4626-409D-B85B-06BDCD4D27FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4CCCFF2-4626-409D-B85B-06BDCD4D27FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4CCCFF2-4626-409D-B85B-06BDCD4D27FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4CCCFF2-4626-409D-B85B-06BDCD4D27FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

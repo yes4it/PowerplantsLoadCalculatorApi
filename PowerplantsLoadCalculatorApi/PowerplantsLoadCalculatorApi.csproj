@@ -18,7 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GemBAL\GemBAL.csproj" />
-    <ProjectReference Include="..\GemDAL\GemDomain.csproj" />
+    <ProjectReference Include="..\GemDomain\GemDomain.csproj" />
   </ItemGroup>
 
 </Project>

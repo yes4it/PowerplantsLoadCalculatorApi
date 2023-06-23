@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GemDAL\GemDomain.csproj" />
+    <ProjectReference Include="..\GemDomain\GemDomain.csproj" />
   </ItemGroup>
 
 </Project>
